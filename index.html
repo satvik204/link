@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety Device</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+            overflow: hidden;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            color: #fff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Heading Styles */
+        .main-heading {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .subheading {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 2em;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Button Styles */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .btn {
+            padding: 1em 2.5em;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Neon Hover Effects */
+        .neon-btn {
+            background: transparent; /* No background */
+        }
+
+        .neon-btn:hover {
+            color: #fff;
+        
+            background:#ff0099;
+            box-shadow: 0 0 20px #ff0099, 0 0 30px #ff0099, 0 0 40px #ff0099;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2em;
+            }
+
+            .subheading {
+                font-size: 1.2em;
+            }
+
+            .btn {
+                padding: 0.8em 2em;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">Welcome to Women Safety Device</h1>
+        <p class="subheading">Get 4 features in one lipstick</p>
+        <div class="button-container">
+            <a href="login.html" class="btn neon-btn login-btn">Login</a>
+            <a href="register.html" class="btn neon-btn signup-btn">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

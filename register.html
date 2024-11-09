@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/form.css">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="login_content">
+            <img src="./images/bg-login.png" alt="login img" class="login_img">
+            <form action="" class="login_form">
+                <div>
+                     <h1 class="login_title"><span>Welcome</span></h1>
+                     <p class="login_description">Please register to continue.</p>
+                </div>
+                <div>
+                    <div class="login_inputs">
+                        <div>
+                            <label for="" class="login_label">Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required class="login_input">
+                        </div>
+                        <div>
+                            <label for="" class="login_label">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" required class="login_input">
+                        </div>
+                        <div>
+                            <label for="" class="login_label">Password</label>
+                            <div class="login_box" > 
+                                <input type="password"  placeholder="Enter your password" id="password" required class="login_input">
+                                  <i class="ri-eye-off-line login_eye" onclick="showhidden()" id="input-icon"></i>       
+                            </div>            
+                            </div>
+
+                    </div>
+                    <div>
+                        <label for="" class="login_label">Security Code(Enter DOB in DD/MM/YYYY) format</label>
+                        <input type="text" id="code" placeholder="Enter your DOB" required class="login_input">
+                    </div>
+                <div>
+                    <div class="login_buttons">
+                        <button class="login_button" id="register">Sign Up</button>
+                        <button class="login_button login_button-ghost" id="login">Log In</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/register.js"></script>
+</body>
+</html>

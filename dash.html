@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(to bottom right, rgba(255, 200, 0, 0.8), rgba(255, 150, 0, 0.8)), url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+            color: #fff;
+        }
+
+        h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Button Styles */
+        button {
+            background: orange;
+            color: white;
+            width: 50vw;
+            border-radius: 12px;
+            height: 50px;
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        button:hover {
+            background: rgb(119, 77, 0);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            button {
+                width: 80vw; /* Make buttons larger on smaller screens */
+            }
+
+            h2 {
+                font-size: 2.5em; /* Adjust heading size on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <button class="update" onclick="update()">Update Profile</button>
+    <button class="capture" onclick="capture()">Capture Photo</button>
+    <button class="location" onclick="locate()">View Location</button>
+    <button class="logout" onclick="logout()">Logout</button>
+
+    <script>
+        function update() {
+            location.href = "./update.html";
+        }
+
+        function locate() {
+            location.replace("http://192.168.136.126/geolocation");
+        }
+
+        function capture() {
+            location.replace("http://192.168.136.126");
+        }
+
+        function logout() {
+            localStorage.setItem("remember", "false");
+            location.href = "./index.html";
+        }
+    </script>
+</body>
+</html>
